@@ -1,0 +1,25 @@
+nav {
+  display: flex;  
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.active {
+  background-color: rgb(54, 219, 231);
+  color: white;
+  padding: 20px;
+}
+.active:hover {
+  padding-inline: 22px;
+}
+
+.notActive {
+  background-color:white;
+  color: rgb(54, 219, 231);
+  padding: 20px;
+  font-weight: bold;
+}
+.notActive:hover {
+    padding-inline: 22px;
+  }
