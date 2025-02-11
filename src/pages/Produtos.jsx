@@ -1,7 +1,31 @@
-const Produtos = () => {
-  return (
-    <div>Produtos</div>
-  )
-}
+import { useContext } from "react";
+import { useState } from "react";
 
-export default Produtos
+import { DataContext } from "../Context/DataContext";
+
+import { Data } from '../Componentes/Data'
+
+import styles from '../pages/Produtos.module.css'
+
+const Produtos = () => {
+  const { nome } = useContext(DataContext);
+  const [produtos, setProdutos] = useState(Data)
+
+
+  return (
+  <div>
+      {nome && <h1>Confira nossos produtos {nome}</h1>}
+      <ul className={styles.ul}>
+        {produtos.map((produto) => (
+          <div key={produto.id} className={styles.li}>
+            <li>{produto.nome}</li>
+            <li>{produto.valor}</li>
+            <button className={styles.visitar}>Adquira</button>
+          </div>
+        ))}
+      </ul>
+  </div>
+  )
+};
+
+export default Produtos;
