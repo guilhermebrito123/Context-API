@@ -1,14 +1,16 @@
-import { useContext } from "react";
+//Hooks:
 import { useState } from "react";
+import { useDataContext } from "../Hooks/useDataContext";
+//import { useContext } from "react";
 
-import { DataContext } from "../Context/DataContext";
+//import { DataContext } from "../Context/DataContext";
 
 import { Data } from '../Componentes/Data'
 
 import styles from '../pages/Produtos.module.css'
 
 const Produtos = () => {
-  const { nome } = useContext(DataContext);
+  const { nome } = useDataContext();
   const [produtos] = useState(Data)
 
 
