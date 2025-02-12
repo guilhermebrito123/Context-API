@@ -12,21 +12,24 @@ import Navbar from "./Componentes/Navbar";
 
 //Contexto:
 import { DataContextProvider } from "./Context/DataContext";
+import { ColorContextProvider } from "./Context/ColorContext";
 
 function App() {
   return (
     <div className="pai">
-      <DataContextProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/produtos" element={<Produtos />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </DataContextProvider>
+      <ColorContextProvider>
+        <DataContextProvider>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/produtos" element={<Produtos />} />
+              <Route path="/sobre" element={<Sobre />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </DataContextProvider>
+      </ColorContextProvider>
     </div>
   );
 }
