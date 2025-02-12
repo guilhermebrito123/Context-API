@@ -6,11 +6,20 @@
 }
 
 .li{
+    background-color: rgb(54, 219, 231);
+    color: white;
+    font-weight: bold;
     padding: 10px;
-    border: 5px solid black;
+    border: 5px solid rgb(103, 212, 219);
+    box-shadow: 10px 5px 5px rgb(54, 219, 231);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .visitar{
-    background: linear-gradient(to right, #fff, #727171)
+    background: linear-gradient(to right, #fff, #9e9a9a);
+    width: 100px;
+    margin: auto;    
 }

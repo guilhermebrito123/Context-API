@@ -10,5 +10,11 @@ export const Data = [
         nome: "Bola de Vôlei",
         valor: "200,00",
         disponivel: false
+    },
+    {
+        id: 3,
+        nome: "Bola de Handibol",
+        valor: "200,00",
+        disponivel: false
     }
 ]

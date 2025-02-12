@@ -9,7 +9,7 @@ import styles from '../pages/Produtos.module.css'
 
 const Produtos = () => {
   const { nome } = useContext(DataContext);
-  const [produtos, setProdutos] = useState(Data)
+  const [produtos] = useState(Data)
 
 
   return (
@@ -20,7 +20,7 @@ const Produtos = () => {
           <div key={produto.id} className={styles.li}>
             <li>{produto.nome}</li>
             <li>{produto.valor}</li>
-            <button className={styles.visitar}>Adquira</button>
+            {produto.disponivel ? (<button className={styles.visitar}>Adquira</button>) : (<button disabled className={styles.visitar}>Esgotado</button>)}
           </div>
         ))}
       </ul>
